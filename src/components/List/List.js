@@ -9,12 +9,12 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     image: PropTypes.string.isRequired,
     children: PropTypes.node,
-    columnTitles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    columns: PropTypes.arrayOf(PropTypes.string).isRequired,
   }
 
   static defaultProps = {
     children: <p>I can do all the things!!!</p>,
-    columnTitles: ['Column1', 'Column2', 'Column3'],
+    columns: ['Column1', 'Column2', 'Column3'],
   }
 
   render() {
@@ -25,9 +25,9 @@ class List extends React.Component {
           {this.props.children}
         </div>
         <div className={styles.columns}>
-          <Column columnTitle={this.props.columnTitles[0]} />
-          <Column columnTitle={this.props.columnTitles[1]} />
-          <Column columnTitle={this.props.columnTitles[2]} />
+          <Column columns={this.props.columns[0]} />
+          <Column columns={this.props.columns[1]} />
+          <Column columns={this.props.columns[2]} />
         </div>
       </section>
     )
