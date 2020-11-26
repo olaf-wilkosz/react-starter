@@ -26,7 +26,7 @@ class Creator extends React.Component {
   }
 
   handleOK = () => {
-    if(this.state.value != ''){
+    if (this.state.value != '') {
       this.props.action(this.state.value);
       this.setState({
         value: '',
@@ -36,10 +36,12 @@ class Creator extends React.Component {
   }
 
   handleCancel = () => {
-    this.setState({
-      value: '',
-      visibleButtons: false
-    });
+    if (window.confirm('Delete the title?')) {
+      this.setState({
+        value: '',
+        visibleButtons: false
+      });
+    }
   }
 
   render() {
