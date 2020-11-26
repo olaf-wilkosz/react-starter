@@ -14,6 +14,7 @@ class List extends React.Component {
 
   static defaultProps = {
     children: <p>I can do all the things!!!</p>,
+    columnTitles: ['Column1', 'Column2', 'Column3'],
   }
 
   render() {
