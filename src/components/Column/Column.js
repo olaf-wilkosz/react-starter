@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Column extends React.Component {
   static propTypes = {
-    columns: PropTypes.string.isRequired,
+    columns: PropTypes.object.isRequired,
   }
 
   render() {
