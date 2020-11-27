@@ -1,4 +1,5 @@
 export const settings = {
+  listCreatorText: 'Add new list',
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
   creator: {
