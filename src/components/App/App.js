@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './App.scss';
 import List from '../List/List';
+import Creator from '../Creator/Creator';
 import { pageContents, listData } from '../../data/dataStore';
 import { settings } from '../../data/dataStore';
-import Creator from '../Creator/Creator';
+import styles from './App.scss';
 
 class App extends React.Component {
   state = {
