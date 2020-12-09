@@ -6,6 +6,7 @@ import styles from './Creator.scss';
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
+    action: PropTypes.func,
   }
 
   static defaultProps = {
@@ -21,7 +22,7 @@ class Creator extends React.Component {
     // console.log(event);
     this.setState({
       value: event.target.value,
-      visibleButtons: event.target.value.length > 0
+      visibleButtons: event.target.value.length > 0,
     });
   }
 
@@ -30,7 +31,7 @@ class Creator extends React.Component {
       this.props.action(this.state.value);
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
@@ -39,13 +40,14 @@ class Creator extends React.Component {
     if (window.confirm('Delete the title?')) {
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
 
   handleInfo = () => {
     if (window.alert('Hit OK to save new title or cancel to clear')) {
+      return;
     }
   }
 

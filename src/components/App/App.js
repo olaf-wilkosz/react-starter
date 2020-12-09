@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import List from '../List/List';
 import Creator from '../Creator/Creator';
 import { pageContents, listData } from '../../data/dataStore';
@@ -8,6 +9,9 @@ import styles from './App.scss';
 class App extends React.Component {
   state = {
     listData: this.props.listData || [],
+  }
+  static propTypes = {
+    listData: PropTypes.node,
   }
 
   addList(title) {
@@ -20,9 +24,9 @@ class App extends React.Component {
             title,
             image: 'https://images.pexels.com/photos/230744/pexels-photo-230744.jpeg',
             description: [],
-            columns: []
-          }
-        ]
+            columns: [],
+          },
+        ],
       }
     ));
   }
@@ -38,7 +42,7 @@ class App extends React.Component {
         ))}
         <Creator text={settings.listCreatorText} image="{settings.defaultImage}" action={title => this.addList(title)} />
       </main>
-    )
+    );
   }
 }
 
