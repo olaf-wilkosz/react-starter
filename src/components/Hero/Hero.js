@@ -6,13 +6,13 @@ import styles from './Hero.scss';
 const Hero = props => (
   <header className={styles.component}>
     <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
-    <img className={styles.image} src={props.imageAddress} />
+    <img className={styles.image} src={props.image} />
   </header>
 );
 
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
-  imageAddress: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Hero;
