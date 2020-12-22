@@ -23,7 +23,7 @@ class List extends React.Component {
   }
 
   render() {
-    const { title, image, description, columns, addColumn, children } = this.props;
+    const { title, image, description, columns, addColumn } = this.props;
     return (
       <Container>
         <section className={styles.component}>
@@ -33,7 +33,7 @@ class List extends React.Component {
           </div>
           <div className={styles.columns}>
             {columns.map(columnData => (
-              <Column key={columnData.id} {...columnData}>{children}</Column>
+              <Column key={columnData.id} {...columnData} />
             ))}
           </div>
           <div className={styles.creator}>
