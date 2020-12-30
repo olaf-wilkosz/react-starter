@@ -3,7 +3,6 @@ import MainLayout from '../MainLayout/MainLayout';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
 import Faq from '../Faq/Faq';
-
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const App = () => (
