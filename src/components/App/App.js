@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import MainLayout from '../MainLayout/MainLayout';
 import Home from '../Home/HomeContainer';
+import SearchResults from '../SearchResults/SearchResults';
 import Info from '../Info/Info';
 import Faq from '../Faq/Faq';
 import List from '../List/ListContainer';
@@ -18,6 +19,7 @@ const App = () => (
         className={styles.switchWrapper}
       >
         <Route exact path='/' component={Home} />
+        <Route exact path='/search/:searchString' component={SearchResults} />
         <Route exact path='/info' component={Info} />
         <Route exact path='/faq' component={Faq} />
         <Route exact path="/list/:id" component={List} />
