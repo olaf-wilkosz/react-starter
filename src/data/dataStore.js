@@ -11,7 +11,8 @@ export const settings = {
     icon: 'search',
   },
   header: {
-    icon: 'laptop-code',
+    icon: 'react',
+    prefix: 'fab',
   },
   info: {
     titleText: 'Info',

@@ -10,20 +10,22 @@ import styles from './Header.scss';
 class Header extends React.Component {
   static propTypes = {
     icon: PropTypes.string,
+    prefix: PropTypes.string,
   }
 
   static defaultProps = {
     icon: settings.header.icon,
+    prefix: settings.header.prefix,
   }
 
   render() {
-    const { icon } = this.props;
+    const { icon, prefix } = this.props;
     return (
       <header className={styles.component}>
         <Container>
           <div className={styles.wrapper}>
             <Link className={styles.logo} to='/'>
-              <Icon name={icon} />
+              <Icon name={icon} prefix={prefix} />
             </Link>
             <Search />
             <nav>
