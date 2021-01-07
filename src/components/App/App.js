@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import MainLayout from '../MainLayout/MainLayout';
 import Home from '../Home/HomeContainer';
-import SearchResults from '../SearchResults/SearchResults';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 import Info from '../Info/Info';
 import Faq from '../Faq/Faq';
 import List from '../List/ListContainer';

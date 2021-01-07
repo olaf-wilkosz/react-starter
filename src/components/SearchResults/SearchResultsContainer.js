@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchResults from './SearchResults';
-import { getCardsForSearchResults } from '../../redux/cardsRedux';
+import { getCardsForSearchResults } from '../../redux/cardRedux';
 import { createAction_changeSearchString } from '../../redux/searchStringRedux';
 
 const mapStateToProps = (state, props) => ({

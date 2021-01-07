@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
-import Search from '../Search/Search';
+import Search from '../Search/SearchContainer';
 import { settings } from '../../data/dataStore';
 import styles from './Header.scss';
 
